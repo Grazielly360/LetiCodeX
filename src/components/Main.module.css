@@ -3,7 +3,7 @@
   grid-template-areas: "main";
   grid-template-rows: auto 1fr;
   min-height: 100vh;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 .main {
@@ -18,7 +18,7 @@
 }
 
 .card {
-  background-color: white;
+  background-color: rgb(240, 168, 212);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

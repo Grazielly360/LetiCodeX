@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: rgb(169, 97, 144);
   padding: 1.5rem;
 }
 

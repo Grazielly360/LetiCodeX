@@ -1,4 +1,10 @@
 import styles from "./Main.module.css";
+import persa from "../assets/persa.jpeg";
+import cats from "../assets/cats.png";
+import Sphynx from "../assets/Sphynx.jpeg";
+import gato from "../assets/gato.jpeg";
+import puma from "../assets/puma.jpg";
+
 
 export function Main() {
   return (
@@ -7,7 +13,7 @@ export function Main() {
       <div className={styles.main}>
         <div className={styles.grid}>
           <div className={styles.card}>
-            <img src="https://picsum.photos/300/200?random=1" alt="Random" className={styles.cardImage} />
+            <img src={persa} alt="Random" className={styles.cardImage} />
             <div className={styles.cardContent}>
               <h2>My Text 0</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur assumenda repudiandae 
@@ -16,7 +22,7 @@ export function Main() {
             </div>
           </div>
           <div className={styles.card}>
-            <img src="https://picsum.photos/300/200?random=2" alt="Random" className={styles.cardImage} />
+            <img src={cats} alt="Random" className={styles.cardImage} />
             <div className={styles.cardContent}>
               <h2>My Text 1</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, nesciunt inventore labore nihil, 
@@ -25,7 +31,7 @@ export function Main() {
             </div>
           </div>
           <div className={styles.card}>
-            <img src="https://picsum.photos/300/200?random=3" alt="Random" className={styles.cardImage} />
+            <img src={Sphynx} alt="Random" className={styles.cardImage} />
             <div className={styles.cardContent}>
               <h2>My Text 2</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique animi eligendi delectus 
@@ -34,7 +40,7 @@ export function Main() {
             </div>
           </div>
           <div className={styles.card}>
-            <img src="https://picsum.photos/300/200?random=4" alt="Random" className={styles.cardImage} />
+            <img src={gato} alt="Random" className={styles.cardImage} />
             <div className={styles.cardContent}>
               <h2>My Text 3</h2>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam maiores ullam accusamus vel 
@@ -43,7 +49,7 @@ export function Main() {
             </div>
           </div>
           <div className={styles.card}>
-            <img src="https://picsum.photos/300/200?random=5" alt="Random" className={styles.cardImage} />
+            <img src={puma} alt="Random" className={styles.cardImage} />
             <div className={styles.cardContent}>
               <h2>My Text 4</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil repellendus, blanditiis 
