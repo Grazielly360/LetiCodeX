@@ -10,10 +10,7 @@ export default function App() {
   return (
     //React Fragment
     <>
-      <Header />
-      <Main />
-      <Footer />
-      <LuckyNumber number={0} /> *
+      <LuckyNumber />
     </>
   );
 }
