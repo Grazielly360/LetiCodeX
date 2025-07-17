@@ -19,6 +19,8 @@ export function LuckyNumber() {
     }
   }
 
+
+  
   return (
     <div className={styles.container}>
       {luckyNumber ? (
