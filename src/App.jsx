@@ -3,7 +3,7 @@ import "./styles/global.css";
 import { ProductList } from "./components/ProductList";
 import { Header } from "./components/Header";
 import { useState } from "react";
-import { Route } from "react-router";
+import { Routes, Route } from "react-router-dom";
 import { Cart } from "./components/Cart";
 export default function App() {
   
@@ -21,7 +21,6 @@ export default function App() {
         <Route path="/" element={<ProductList addToCart={addToCart} />} />
         <Route path="/cart" element={<Cart cart={cart} />} />
       </Routes>
-      <ProductList addToCart={addToCart} />
     </>
   );
 }

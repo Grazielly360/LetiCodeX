@@ -15,8 +15,10 @@ export function Header({ cart }) {
         🛒 {cart.length} itens
       </div>
 
-      <Link to="/carrinho" className={styles.link}>
-        <ShoppingBasket />
+      <Link to="/cart">
+        <button className={styles.cartButton}>
+          <ShoppingBasket />
+        </button>
       </Link>
     </div>
   );
