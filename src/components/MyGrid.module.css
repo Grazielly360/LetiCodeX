@@ -1,43 +1,11 @@
-.grid {
-  padding: 3rem;
-  display: grid;
-  gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-template-rows: repeat(auto-fit, min-content);
-}
-
-.card {
-  height: 20rem;
-  background-color: var(--primary-dark);
-  color: var(--primary-contrast-light);
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
-  font-size: 3rem;
-  text-align: center;
-}
-
 .container {
   display: grid;
-
   grid-template-areas:
-    "header1 header1"
-    "aside header2"
-    "aside main"
-    "footer footer";
-
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 10rem 5rem auto 10rem;
-
-  @media (max-width: 1200px) {
-    grid-template-areas:
-      "header1"
-      "header2"
-      "main"
-      "footer";
-
-    grid-template-columns: 1fr;
-  }
+    "header1"
+    "main"
+    "footer";
+  grid-template-rows: 10rem auto 10rem;
+  min-height: 100vh;
 }
 
 .header1 {
@@ -45,21 +13,49 @@
   background-color: darkslateblue;
 }
 
-.header2 {
-  grid-area: header2;
-  background-color: deepskyblue;
+.main {
+  grid-area: main;
+  padding: 3rem;
 }
 
-.aside {
-  grid-area: aside;
-  background-color: deeppink;
+.grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-rows: repeat(auto-fit, min-content);
+}
 
-  @media (max-width: 1200px) {
-    display: none;
-  }
+.card {
+  width: 100%; /* Ocupa toda a largura do grid column */
+  max-width: 35rem; /* Largura máxima para evitar que fiquem muito largos */
+  height: 20rem;
+  background-color: var(--primary-dark);
+  color: var(--primary-contrast-light);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  font-size: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {
   grid-area: footer;
   background-color: darkslateblue;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    padding: 1.5rem;
+  }
+  
+  .card {
+    max-width: 100%; /* Ocupa toda a largura disponível */
+    height: 18rem;
+    font-size: 2rem;
+  }
 }

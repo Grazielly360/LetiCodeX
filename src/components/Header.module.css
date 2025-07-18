@@ -1,3 +1,41 @@
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(169, 97, 144);
+  padding: 1.5rem;
+}
+
+.centralContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.tema {
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .centralContainer {
+    gap: 1rem;
+    /* Espaço menor em mobile */
+  }
+
+  .tema {
+    font-size: 1.6rem;
+  }
+}
+
+.containerImg img {
+  height: auto;
+  width: 100%;
+  max-width: 10rem;
+}
 .container {
   display: flex;
   flex-direction: column;
