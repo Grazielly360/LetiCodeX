@@ -5,8 +5,8 @@ import { Header } from "./components/Header";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Cart } from "./components/Cart";
+
 export default function App() {
-  
   const [cart, setCart] = useState([]);
 
   function addToCart(product) {
@@ -14,12 +14,11 @@ export default function App() {
   }
 
   return (
-    //React Fragment
     <>
       <Header cart={cart} />
       <Routes>
         <Route path="/" element={<ProductList addToCart={addToCart} />} />
-        <Route path="/cart" element={<Cart cart={cart} />} />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} /> {/* Corrigido aqui */}
       </Routes>
     </>
   );
