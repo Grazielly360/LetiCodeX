@@ -56,33 +56,34 @@ export function Cart({ cart, setCart }) {
       ) : (
         <>
           <ul className={styles.cartList}>
-            {cartItems.map((product) => (
-              <li key={product.id} className={styles.cartItem}>
-                <img src={product.thumbnail} alt={product.title} className={styles.cartImg} />
-                <span className={styles.cartTitle}>{product.title}</span>
-                <span className={styles.cartPrice}>
-                  R$ {(product.price * product.qty).toFixed(2)}
-                </span>
-                <div className={styles.cartQty}>
-                  <button
-                    className={styles.cartButton}
-                    onClick={() => handleQtyChange(product.id, -1)}
-                    disabled={product.qty <= 1}
-                  >
-                    -
-                  </button>
-                  <span>{product.qty}</span>
-                  <button
-                    className={styles.cartButton}
-                    onClick={() => handleQtyChange(product.id, 1)}
-                  >
-                    +
-                  </button>
-                  {/* Botão "Remover item" removido */}
-                </div>
-              </li>
-            ))}
-          </ul>
+  {cartItems.map((product) => (
+    <li key={product.id} className={styles.cartItem}>
+      <img src={product.thumbnail} alt={product.title} className={styles.cartImg} />
+      <span className={styles.cartTitle}>{product.title}</span>
+      <span className={styles.cartPrice}>
+        R$ {(product.price * product.qty).toFixed(2)}
+      </span>
+      <div className={styles.cartQty}>
+        <button
+          className={styles.cartButton}
+          onClick={() => handleQtyChange(product.id, -1)}
+          disabled={product.qty <= 1}
+        >
+          -
+        </button>
+        <span>{product.qty}</span>
+        <button
+          className={styles.cartButton}
+          onClick={() => handleQtyChange(product.id, 1)}
+        >
+          +
+        </button>
+      </div>
+    </li>
+  ))}
+</ul>
+
+
         </>
       )}
     </div>
