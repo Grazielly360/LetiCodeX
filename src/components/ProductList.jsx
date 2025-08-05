@@ -5,7 +5,7 @@ import { useState, useContext, useEffect, useRef } from "react";
 import { CartContext } from "../service/CartContext";
 
 export function ProductList() {
-  
+
   const { products, loading, error } = useContext(CartContext);
 
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -44,14 +44,13 @@ export function ProductList() {
           onChange={handleSearch}
         />
         <button className={styles.searchButton} onClick={handleClear}>
-          🔍
+          CLEAR
         </button>
       </div>
       <div className={styles.productList}>
         {filteredProducts.map((product) => (
           <Product key={product.id} product={product} />
         ))}
-
       </div>
       {loading && (
         <div>

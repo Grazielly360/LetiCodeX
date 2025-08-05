@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 5rem;
-  padding: 2rem 5rem;
+  padding: 3rem 5rem;
   margin: 2rem;
   border-radius: 1rem;
   background-color: var(--gray-100);
@@ -72,4 +72,13 @@
 .quantityControls span {
   font-size: 2rem;
   margin: 0 2rem;
+}
+
+.removeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-dark);
+  font-size: 2.5rem;
+  margin-left: 2rem;
 }
