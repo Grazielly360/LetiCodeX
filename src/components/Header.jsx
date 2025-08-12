@@ -12,27 +12,38 @@ export function Header() {
       <Link to="/" className={styles.link}>
         <h1>TJA Megastore</h1>
       </Link>
-      <Link to="/cart" className={styles.link}>
-        <div className={styles.cartInfo}>
-          <ShoppingBasket size={32} />
-          <div className={styles.cartIcon}>
-            {cart.length > 0 && (
-              <span className={styles.cartCount}>
-                {cart.reduce((total, item) => total + item.quantity, 0)}
-              </span>
-            )}
+      <nav className={styles.navLinks}>
+        <Link to="/login" className={`${styles.link} ${styles.navButton}`}>
+          🔑 <span className={styles.linkText}>Login</span>
+        </Link>
+        <Link to="/cadastro" className={`${styles.link} ${styles.navButton}`}>
+          📝 <span className={styles.linkText}>Cadastro</span>
+        </Link>
+        <Link to="/gerenciar" className={`${styles.link} ${styles.navButton}`}>
+          🛠️ <span className={styles.linkText}>Gerenciar Produtos</span>
+        </Link>
+        <Link to="/cart" className={`${styles.link} ${styles.navButton}`}>
+          <div
+            className={styles.cartInfo}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "1rem",
+            }}
+          >
+            🛒
+            <ShoppingBasket size={36} />
+            <div className={styles.cartIcon}>
+              {cart.length > 0 && (
+                <span className={styles.cartCount}>
+                  {cart.reduce((total, item) => total + item.quantity, 0)}
+                </span>
+              )}
+            </div>
+            <span className={styles.linkText}>Carrinho</span>
           </div>
-          <p>
-            Total: ${" "}
-            {cart
-              .reduce(
-                (total, product) => total + product.price * product.quantity,
-                0
-              )
-              .toFixed(2)}
-          </p>
-        </div>
-      </Link>
+        </Link>
+      </nav>
     </div>
   );
 }
